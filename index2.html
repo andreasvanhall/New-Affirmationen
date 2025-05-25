@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KI-OMA Affirmationen</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #fef9f4;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .affirmation-box {
+      max-width: 800px;
+      font-size: 1.6rem;
+      line-height: 1.7;
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    button {
+      font-size: 1rem;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="affirmation-box" id="affirmationBox">
+    Klick auf den Button, um eine Affirmation zu lesen.
+  </div>
+
+  <button onclick="newAffirmation()">Neue Affirmation anzeigen</button>
+
+  <script>
+    const affirmations = [
+      "Ich bin genug, so wie ich bin.",
+      "Ich wachse mit jeder Herausforderung.",
+      "Mein Herz ist offen für Freude und Liebe.",
+      "Ich vertraue dem Weg, den das Leben für mich gewählt hat.",
+      "Heute bin ich mutig, freundlich und klar.",
+      "Meine Vergangenheit definiert nicht meine Zukunft.",
+      "Ich bin sicher, geführt und beschützt.",
+      "Ich darf mich ausruhen, ohne mich schuldig zu fühlen.",
+      "Ich liebe meinen Körper, mein Geist ist wach und mein Herz ist offen.",
+      "Jeder Atemzug bringt neue Kraft.",
+      "Ich darf Fehler machen – sie machen mich menschlich.",
+      "Ich bin in meinem eigenen Tempo genau richtig.",
+      "Ich lasse los, was mir nicht mehr dient.",
+      "Ich entscheide mich für inneren Frieden.",
+      "Ich bin eine Quelle der Weisheit und Wärme.",
+      "Ich schenke mir selbst Mitgefühl.",
+      "Ich darf mich verändern, so oft ich möchte.",
+      "Ich trage Kraft und Ruhe in mir.",
+      "Ich bin verbunden mit allem, was mir guttut.",
+      "Ich darf mich zeigen, so wie ich bin.",
+      "Ich schenke mir selbst die Erlaubnis, glücklich zu sein.",
+      "Jeder Tag bringt mir neue Möglichkeiten.",
+      "Ich bin dankbar für meinen Weg bis hierher.",
+      "Ich bin stark – auch in der Stille.",
+      "Ich bin die Heldin meiner eigenen Geschichte."
+    ];
+
+    function newAffirmation() {
+      const randomIndex = Math.floor(Math.random() * affirmations.length);
+      const affirmation = affirmations[randomIndex];
+      document.getElementById("affirmationBox").innerText = affirmation;
+    }
+  </script>
+
+</body>
+</html>
